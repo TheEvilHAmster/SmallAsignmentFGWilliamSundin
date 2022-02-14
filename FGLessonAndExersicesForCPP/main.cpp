@@ -3,13 +3,23 @@
 using namespace std;
 
 int add(int a, int b);
+int result;
 
 int main(){
 
-    int result=0;
+    int x(12);
+    int* prt{ &x };
+    int& ref = x;
+    ref = 123;
 
-    result = add(1,4);
-    cout << "Result: " << result;
+    cout << "Address of x: " << &x << endl;
+    cout << "Adress of x: " << prt << endl;
+    cout << "Address of ref: " << &ref << endl;
+    cout << "Value of x: " << *prt << endl;
+    cout << "Value of x: " << x << endl;
+
+
+
     return 0;
 }
 
